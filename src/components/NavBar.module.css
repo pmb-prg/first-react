@@ -1,0 +1,36 @@
+.navbar{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0 0 5px black;
+}
+.menu{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.menu li{
+    list-style: none;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.menu li:hover{
+    color: rgb(22, 108, 247);
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    background-color: orangered;
+    border-radius: 50%;
+    margin: 10px;
+}
