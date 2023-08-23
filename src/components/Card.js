@@ -24,14 +24,16 @@ export default class Card extends Component {
    
 
   render() {
+    const {image, name, price} = this.props;
+    const{nums} = this.state;
     return (
       <div className={style.container}>
-        <img src={this.props.image}/>
-        <p>{this.props.name}</p>
-        <span className={style.spann}>${this.props.price}</span>
+        <img src={image}/>
+        <p>{name}</p>
+        <span className={style.spann}>{nums ? `$${price} * ${nums} = $${price * nums}` : `$${price}`}</span>
         <div className={style.keys}>
-          <span className={this.state.nums ? "" : style.countDown} onClick={this.downOne}>-</span>
-          <div className={style.count}>{this.state.nums}</div>
+          <span className={!nums && style.countDown} onClick={this.downOne}>-</span>
+          <div className={style.count}>{nums}</div>
           <span onClick={this.upOne}>+</span>
         </div>
       </div>
